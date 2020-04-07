@@ -7,6 +7,8 @@
 
 import React, { useState} from "react"
 import PropTypes from "prop-types"
+import Helmet from 'react-helmet';
+
 import { useStaticQuery, graphql } from "gatsby"
 
 import { ThemeProvider } from 'styled-components';
@@ -15,6 +17,7 @@ import GlobalStyles from '../../style/GlobalStyles';
 import Light from '../../style/themes/Light';
 import Dark from '../../style/themes/Dark';
 
+import favicon from '../../../static/favicon.ico';
 import Header from "../Header";
 import { Container, Footer } from './styles';
 import "./layout.css"
@@ -25,7 +28,11 @@ const Layout = ({ children }) => {
     query SiteTitleQuery {
       site {
         siteMetadata {
-          title
+          title,
+          description,
+          author {
+            name
+          },
         }
       }
     }
@@ -36,15 +43,20 @@ const Layout = ({ children }) => {
   }
   return (
     <ThemeProvider theme={theme}>
+      <Helmet>
+        <meta name="description" content={data.site.siteMetadata.siteDescription} />
+        <link rel="icon" href={favicon} />
+      </Helmet>
+      {/* o resto do conteúdo */}
       <GlobalStyles />
       <Container>
         <Header siteTitle={data.site.siteMetadata.title} onClick={ToggleTheme} />
         <div>
           <main>{children}</main>
           <Footer>
-            © {new Date().getFullYear()}, Built by
+            © {new Date().getFullYear()}, Built by&nbsp;
             {` `}
-            <a href="/"> Carlos Miguel</a>
+            <a href="/">{data.site.siteMetadata.author.name}</a>
           </Footer>
         </div>
       </Container>

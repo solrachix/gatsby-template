@@ -1,6 +1,7 @@
 // src/pages/index.js
 import React, { Component } from "react";
 import { graphql } from "gatsby";
+import SEO from '../components/SEO';
 import ListPosts from '../components/ListPosts';
 
 export default class Index extends Component {
@@ -8,6 +9,7 @@ export default class Index extends Component {
     const { data } = this.props;
     return (
       <>
+      
         <ListPosts data={data}/>
       </>
     )
