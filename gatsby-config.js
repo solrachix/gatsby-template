@@ -10,6 +10,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+    `gatsby-transformer-remark`, //é responsável por transformar os posts do blog escritos em markdown para HTML;
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -49,6 +50,13 @@ module.exports = {
         path: `${__dirname}/src/pages`,
         ignore: [`**/styles.js`]
       },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: `${__dirname}/src/posts`
+      }
     },
     `gatsby-plugin-offline`,
   ]
