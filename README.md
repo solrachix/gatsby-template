@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="80" />
   </a>
 </p>
 <h1 align="center">
@@ -11,9 +11,10 @@ Comece seu projeto com este template. Esse iniciador é fornecido com os arquivo
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+1.  **Crie um site do Gatsby.**
 
-    Use the Gatsby CLI to create a new site, specifying the hello-world starter.
+      
+Use a CLI do Gatsby para criar um novo site, especificando esse **Template**.
 
     ```shell
     # Crie um novo site do Gatsby usando esse Template
