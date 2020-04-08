@@ -78,7 +78,7 @@ Uma rápida olhada nos arquivos e diretórios de nível superior que você verá
 
 11. **package.json**: um arquivo de manifesto para projetos Node.js., que inclui itens como metadados (nome do projeto, autor, etc.). Este manifesto é como o npm sabe quais pacotes instalar para o seu projeto.
 
-12. **README.md **: um arquivo de texto contendo informações de referência úteis sobre o seu projeto.
+12. **README.md**: um arquivo de texto contendo informações de referência úteis sobre o seu projeto.
 
 
 ## 🎓 Aprendendo Gatsby

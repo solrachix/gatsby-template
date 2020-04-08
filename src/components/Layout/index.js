@@ -12,10 +12,10 @@ import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from "gatsby"
 
 import { ThemeProvider } from 'styled-components';
-import GlobalStyles from '../../style/GlobalStyles';
+import GlobalStyles from '../../styles/GlobalStyles';
 
-import Light from '../../style/themes/Light';
-import Dark from '../../style/themes/Dark';
+import Light from '../../styles/themes/Light';
+import Dark from '../../styles/themes/Dark';
 
 import favicon from '../../../static/favicon.ico';
 import Header from "../Header";
