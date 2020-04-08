@@ -13,15 +13,15 @@ Comece seu projeto com este template. Esse iniciador é fornecido com os arquivo
 
 1.  **Crie um site do Gatsby.**
 
-      
-Use a CLI do Gatsby para criar um novo site, especificando esse **Template**.
+     
+	Use a CLI do Gatsby para criar um novo site, especificando esse **Template**.
 
     ```shell
     # Crie um novo site do Gatsby usando esse Template
     gatsby new my-project https://github.com/solrachix/gatsby-template
     ```
 
-1.  **Comece a desenvolver.**
+2.  **Comece a desenvolver.**
 
     Navegue até o diretório do seu novo site e inicie-o.
 
@@ -30,13 +30,13 @@ Use a CLI do Gatsby para criar um novo site, especificando esse **Template**.
     gatsby develop
     ```
 
-1.  **Abra o código e comece a editar!**
+3.  **Abra o código e comece a editar!**
 
-  Seu site agora está sendo executado em `http://localhost:8000`!
+	  Seu site agora está sendo executado em `http://localhost:8000`!
 
-_Nota: Você também verá um segundo link: _`http://localhost:8000/___graphql`_. Esta é uma ferramenta que você pode usar para experimentar a consulta de seus dados. Saiba mais sobre como usar esta ferramenta no [tutorial do Gatsby] (https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql) ._
+	_Nota: Você também verá um segundo link: _`http://localhost:8000/___graphql`_. Esta é uma ferramenta que você pode usar para experimentar a consulta de seus dados. Saiba mais sobre como usar esta ferramenta no [tutorial do Gatsby] (https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql) ._
 
-Abra o diretório `my-project` no seu editor de código de sua escolha e edite` src/pages/index.js`. Salve suas alterações e o navegador será atualizado em tempo real!
+	Abra o diretório `my-project` no seu editor de código de sua escolha e edite` src/pages/index.js`. Salve suas alterações e o navegador será atualizado em tempo real!
 
 ## PWA
 Progressive Web App é um termo usado para denotar uma nova metodologia de desenvolvimento de software. Ao contrário dos tradicionais aplicativos, um Progressive Web App pode ser visto como uma evolução híbrida entre as páginas da web regulares e um aplicativo móvel.
