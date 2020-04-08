@@ -1,4 +1,3 @@
-
 <p align="center">
   <a href="https://www.gatsbyjs.org">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
@@ -34,9 +33,40 @@ Comece seu projeto com este template. Esse iniciador é fornecido com os arquivo
 
   Seu site agora está sendo executado em `http://localhost:8000`!
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+_Nota: Você também verá um segundo link: _`http://localhost:8000/___graphql`_. Esta é uma ferramenta que você pode usar para experimentar a consulta de seus dados. Saiba mais sobre como usar esta ferramenta no [tutorial do Gatsby] (https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql) ._
 
-    Open the `my-hello-world-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+Abra o diretório `my-project` no seu editor de código de sua escolha e edite` src/pages/index.js`. Salve suas alterações e o navegador será atualizado em tempo real!
+
+## PWA
+Progressive Web App é um termo usado para denotar uma nova metodologia de desenvolvimento de software. Ao contrário dos tradicionais aplicativos, um Progressive Web App pode ser visto como uma evolução híbrida entre as páginas da web regulares e um aplicativo móvel.
+
+O web app manifest (parte da especificação [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) ) ativado pelo **plugin manifest**, permite que os usuários adicionem seu site à tela inicial na maioria dos navegadores móveis - [veja aqui](http://caniuse.com/#feat=web-app-manifest) . O manifest fornece configuração e ícones para o telefone.
+
+Este plugin fornece vários recursos além da configuração do manifesto para facilitar sua vida, são eles:
+
+-   Geração automática de ícones - gera vários tamanhos de ícones a partir de uma única fonte
+-   [Suporte Favicon](https://www.w3.org/2005/10/howto-favicon)
+-   Suporte a ícones herdados (iOS) [1](https://www.gatsbyjs.org/packages/gatsby-plugin-manifest/?=pwa#fn-1)
+-   [Bloqueio de cache](https://www.keycdn.com/support/what-is-cache-busting)
+-   Localização - fornece manifestos exclusivos para localização baseada em caminho ( [exemplo de Gatsby](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-i18n) )
+
+Cada um desses recursos possui ampla configuração disponível para que você esteja sempre no controle.
+
+## Plugins implementados:
+Aonde pesquisar esse Plugins? [ Clique aqui e pesquise]([https://www.gatsbyjs.org/plugins/](https://www.gatsbyjs.org/plugins/))
+
+- **react-helmet**: O React Helmet é um componente que permite controlar a cabeça do documento usando o componente React;
+- **sitemap**: Gera um sitemap automático no build;
+- **transformer-remark**: É responsável por transformar os posts do blog escritos em Markdown para HTML;
+- **manifest**: Cria um manifest sem complicações;
+- **feed**: Cria um feed RSS para o seu site.
+- **nprogress**: Barra de progressão na parte superior da pagina, estilo youtube;
+- **google-analytics**: Dá suporte para o analytics no seu site;
+- **styled-components**: Modelo de estilização CSS IN JS;
+- **page-creator**: Cria automaticamente páginas dos componentes React em diretórios especificados;
+- **source-filesystem**: Server para obter dados no aplicativo Gatsby a partir do sistema de arquivos local;
+- **offline**: Dá suporte para o site funcionar offline;
+
 
 ## 🧐 O que tem dentro?
 
@@ -44,7 +74,28 @@ Uma rápida olhada nos arquivos e diretórios de nível superior que você verá
 
     .
     ├── node_modules
-    ├── src
+    ├── config/
+    │ 	└── MetaData.js
+    ├── src/
+    │ 	├── assets/
+	│ 	│ 	└── images/
+	│ 	│ 		└── logo.png
+	│ 	├── components/
+	│ 	├── Pages/
+	|	│ 	└── index.js
+	│ 	├── posts/
+	|	│ 	└── 2020-04-08--nosso-primeiro-post/
+	|	│ 		└── index.md
+	│ 	├── styles/
+	│ 	|	├── themes/
+	│ 	|	└── GlobalStyles.js
+	│ 	├── templates/
+	│ 	|	├── post.js
+	│ 	|	└── tag.js
+	│ 	└── html.js
+	├── static/
+	│ 	├── favicon.ico
+	│ 	└── robots.txt
     ├── .gitignore
     ├── .prettierrc
     ├── gatsby-browser.js
@@ -56,29 +107,22 @@ Uma rápida olhada nos arquivos e diretórios de nível superior que você verá
     ├── package.json
     └── README.md
 
-1. **/ node_modules**: Este diretório contém todos os módulos de código dos quais seu projeto depende (pacotes npm) são instalados automaticamente.
+| Arquivos/Pastas | Descrição |
+|-----------------|-----------|
+| **/node_modules** |  Este diretório contém todos os módulos de código dos quais seu projeto depende (pacotes npm) são instalados automaticamente.
+| **/src** | este diretório conterá todo o código relacionado ao que você verá no front-end do seu site (o que você vê no navegador), como o cabeçalho do site ou um modelo de página . `src` é uma convenção para" código fonte ".
+| **.gitignore** | Este arquivo informa ao git quais arquivos ele não deve rastrear / não manter um histórico de versão.
+| **.prettierrc** | este é um arquivo de configuração para o [Prettier](https://prettier.io/). O Prettier é uma ferramenta para ajudar a manter a formatação do seu código consistente.
+| ***gatsby-browser.js** | É neste arquivo que o Gatsby espera encontrar qualquer uso das [APIs do navegador Gatsby](https://www.gatsbyjs.org/docs/browser-apis/) (caso existam). Isso permite a personalização / extensão das configurações padrão do Gatsby que afetam o navegador.
+| **gatsby-config.js** | Este é o principal arquivo de configuração de um site do Gatsby. É aqui que você pode especificar informações sobre o seu site (metadados), como o título e a descrição do site, quais plugins do Gatsby você gostaria de incluir, etc. (Confira os [documentos da configuração](https://www.gatsbyjs.org/docs/gatsby-config/) para mais detalhes).
+| **gatsby-node.js** | É neste arquivo que o Gatsby espera encontrar qualquer uso das [APIs do Nó Gatsby](https://www.gatsbyjs.org/docs/node-apis/) (caso existam). Isso permite a personalização / extensão das configurações padrão do Gatsby que afetam partes do processo de criação do site.
+| **gatsby-ssr.js** | É neste arquivo que o Gatsby espera encontrar qualquer uso das [APIs de renderização do servidor Gatsby](https://www.gatsbyjs.org/docs/ssr-apis/) (caso existam). Isso permite a personalização das configurações padrão do Gatsby que afetam a renderização no servidor.
+| **LICENSE** |  Gatsby está licenciado sob a licença MIT
+| **package-lock.json** |  (consulte`package.json` abaixo, primeiro). Este é um arquivo gerado automaticamente com base nas versões exatas das dependências do npm que foram instaladas para o seu projeto. **(Você não altera este arquivo diretamente).**
+| **package.json** | Um arquivo de manifesto para projetos Node.js., que inclui itens como metadados (nome do projeto, autor, etc.). Este manifesto é como o npm sabe quais pacotes instalar para o seu projeto.
+| **README.md** | Um arquivo de texto contendo informações de referência úteis sobre o seu projeto.
+| **** |
 
-2. **/ src**: este diretório conterá todo o código relacionado ao que você verá no front-end do seu site (o que você vê no navegador), como o cabeçalho do site ou um modelo de página . `src` é uma convenção para" código fonte ".
-
-3. **.gitignore**: Este arquivo informa ao git quais arquivos ele não deve rastrear / não manter um histórico de versão.
-
-4. **.prettierrc**: este é um arquivo de configuração para o [Prettier] (https://prettier.io/). O Prettier é uma ferramenta para ajudar a manter a formatação do seu código consistente.
-
-5. **gatsby-browser.js**: é neste arquivo que o Gatsby espera encontrar qualquer uso das [APIs do navegador Gatsby] (https://www.gatsbyjs.org/docs/browser-apis/) ( caso existam). Isso permite a personalização / extensão das configurações padrão do Gatsby que afetam o navegador.
-
-6. **gatsby-config.js**: Este é o principal arquivo de configuração de um site do Gatsby. É aqui que você pode especificar informações sobre o seu site (metadados), como o título e a descrição do site, quais plugins do Gatsby você gostaria de incluir, etc. (Confira os [documentos da configuração] (https://www.gatsbyjs.org / docs / gatsby-config /) para mais detalhes).
-
-7. **gatsby-node.js**: é neste arquivo que o Gatsby espera encontrar qualquer uso das [APIs do Nó Gatsby] (https://www.gatsbyjs.org/docs/node-apis/) ( caso existam). Isso permite a personalização / extensão das configurações padrão do Gatsby que afetam partes do processo de criação do site.
-
-8. **gatsby-ssr.js**: é neste arquivo que o Gatsby espera encontrar qualquer uso das [APIs de renderização do servidor Gatsby] (https://www.gatsbyjs.org/docs/ssr-apis /) (caso existam). Isso permite a personalização das configurações padrão do Gatsby que afetam a renderização no servidor.
-
-9. **LICENÇA**: Gatsby está licenciado sob a licença MIT.
-
-10. **package-lock.json** (consulte` package.json` abaixo, primeiro). Este é um arquivo gerado automaticamente com base nas versões exatas das dependências do npm que foram instaladas para o seu projeto. ** (Você não altera este arquivo diretamente). **
-
-11. **package.json**: um arquivo de manifesto para projetos Node.js., que inclui itens como metadados (nome do projeto, autor, etc.). Este manifesto é como o npm sabe quais pacotes instalar para o seu projeto.
-
-12. **README.md**: um arquivo de texto contendo informações de referência úteis sobre o seu projeto.
 
 
 ## 🎓 Aprendendo Gatsby
