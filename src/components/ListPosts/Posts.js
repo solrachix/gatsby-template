@@ -3,6 +3,7 @@ import React from 'react';
 import { Posts, Post, PostTitle, PostDate } from './styles';
 
 export default ({ data }) => {
+  if (!data) { return null };
   const { edges } = data.allMarkdownRemark;
   const posts = (
     edges.map(({ node }) => (

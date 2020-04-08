@@ -2,8 +2,8 @@ import React from 'react';
 
 // import { Container } from './styles';
 
-export default function About() {
+export default function pages() {
   return (
-    <div />
+    <h1>Error 404</h1>
   );
 }
